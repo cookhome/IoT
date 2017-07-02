@@ -46,12 +46,12 @@ srv:listen(80,function(conn)
                         light = 0;
                         tlight:stop(); -- stop possible auto light off
                     end
-                    pwd=nil; no further processing of data
+                    pwd=nil; -- no further processing of data
                 end
             end            
         else
             -- pending POST password processing (for IOS devices)
-            passfind = nil; // nor more pending POST password
+            passfind = nil; -- no more pending POST password
             pwd1 = string.find(request, "PASSWORD=");
             if(pwd1 ~= nil)then pwd = string.sub(request, pwd1+9, #request) end -- obtain password if there is
         end
