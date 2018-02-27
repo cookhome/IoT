@@ -1,3 +1,5 @@
+// Use LwIP 1.4. LwIP 2.0 doesn't work reliably.
+
 #include <ESP8266WiFi.h>
 
 // Include API-Headers
