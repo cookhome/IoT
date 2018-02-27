@@ -57,6 +57,7 @@ void SdkWebServer_recv(void *arg, char *pusrdata, unsigned short length)
   {
     found = os_strstr(found, "PASSWORD=");
     if(found == NULL) return;
+    post_found = false;
     found += 9;
     if(os_strstr(found, "12345678") == found)
     {
